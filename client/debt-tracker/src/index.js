@@ -13,7 +13,7 @@ ReactDOM.render(
       <Route exact path='/'>
         <App />
       </Route>
-      <Route exact path='/owed'>
+      <Route path='/owed'>
         <Owed />
       </Route>
     </Router>
