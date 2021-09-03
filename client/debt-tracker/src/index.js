@@ -1,22 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
 import reportWebVitals from './reportWebVitals'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 //Pages
 import App from './pages/App';
-import Owed from './pages/Owed';
+import Pay from './pages/Pay';
+import AddTransaction from './pages/AddTransaction';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+    <Switch>
       <Route exact path='/'>
         <App />
       </Route>
-      <Route path='/owed'>
-        <Owed />
+      <Route path='/pay'>
+        <Pay />
       </Route>
+      <Route path='/add-transaction'>
+        <AddTransaction/>
+      </Route>
+    </Switch>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
