@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 //Pages
-import App from './pages/App';
-import Pay from './pages/Pay';
+import Total from './pages/Total';
 import AddTransaction from './pages/AddTransaction';
 
 ReactDOM.render(
@@ -13,10 +12,10 @@ ReactDOM.render(
     <Router>
     <Switch>
       <Route exact path='/'>
-        <App />
+        <Redirect to='/all-transactions'/>
       </Route>
-      <Route path='/pay'>
-        <Pay />
+      <Route path='/all-transactions'>
+        <Total/>
       </Route>
       <Route path='/add-transaction'>
         <AddTransaction/>
